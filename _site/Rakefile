@@ -12,7 +12,7 @@ namespace :build do
   file 'post' do touch '_layouts/post.html' end
 
   desc "Builds basic Jekyll file structure"
-  task :all => ['_layouts', '_posts', '_includes', '_site', 'css', 'images', 'index', 'config', 'default', 'post']
+  task :all => ['_layouts', '_posts', '_includes', '_site', 'stylesheets', 'images', 'index', 'config', 'default', 'post']
 end
 
 desc "Given a title as an argument, create a new post file"

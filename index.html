@@ -4,9 +4,19 @@ title: Test index
 ---
 
 <div id="home">
-  <ul>
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span><a href="{{post.url}}">{{post.title}}</a></li>
+    <article>
+      <header>
+        <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+        <time>{{post.date | date_to_string}} </time>
+      </header>
+      
+      {{post.content | truncate:450}}
+      <a href="{{post.url}}">Read more</a>
+      
+      <footer>
+        <aside>Category: {{post.category}}</aside>
+      </footer>
+    </article>
     {% endfor %}
-  </ul>
 </div>
